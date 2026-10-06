@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bet Analytics — Últimos 10</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>Bet Analytics</h1>
+    <p>Analizador de últimos 10 partidos</p>
+  </div>
+  <button id="demoBtn">Cargar ejemplo</button>
+</header>
+
+<main>
+<section class="card">
+<h2>Equipos</h2>
+<div class="grid two">
+  <label>Equipo A<input id="teamA" value="Equipo A"></label>
+  <label>Equipo B<input id="teamB" value="Equipo B"></label>
+</div>
+<p class="hint">Cargá cada resultado como GF-GC. Ejemplo: 2-1. Los 10 deben estar ordenados del más reciente al más antiguo.</p>
+<div class="grid two">
+  <div><h3>Últimos 10 — A</h3><div id="inputsA" class="scores"></div></div>
+  <div><h3>Últimos 10 — B</h3><div id="inputsB" class="scores"></div></div>
+</div>
+<button class="primary" id="analyze">Analizar partido</button>
+</section>
+
+<section id="results" class="hidden">
+<div class="card">
+<h2>Resumen estadístico</h2>
+<div id="summary" class="stats"></div>
+</div>
+
+<div class="card">
+<h2>Apuestas más obvias</h2>
+<p class="hint">Ranking estadístico. “Confianza” es una puntuación basada únicamente en los datos cargados, no una probabilidad garantizada.</p>
+<div id="bets"></div>
+</div>
+
+<div class="card">
+<h2>Señales y advertencias</h2>
+<div id="warnings"></div>
+</div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
